@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Login karne ka source code  -->
+
+    <div class="login-container">
+      <h2> Login </h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="email"> <b>Email or Mobile Number</b></label>
+          <input type="text" id="email" placeholder="Apna email daalein" required>
+        </div>
+        <div class="input-group">
+          <label for="password"> <b>Password/OTP</b> </label>
+          <input type="password" id="password" placeholder="Password daalein" required>
+         </div>
+         <button type="submit" class="login-btn">Login</button>
+         <!-- <button onclick="loginUser()">Login</button> -->
+         <p id="message"></p>
+      </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="script4.js"></script>
+
+    <!-- CHANGES HUYE HAI -->
+ <script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+ <!-- YAHA TAK HUA HAI -->
+</body>
+</html>
